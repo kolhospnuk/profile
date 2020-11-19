@@ -1,0 +1,142 @@
+.header {
+  height: 100px;
+  background-color: #00838e;
+  color: rgba(255, 255, 255, 0.8);
+  border-bottom: #003b40 solid 3px;
+}
+.header-line {
+  height: 12px;
+  background-color: #003b40;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+}
+.header-content-name {
+  display: inline-block;
+  padding: 0 45px;
+}
+.header-content-name h1 {
+  font-size: 25px;
+  margin-top: 16px;
+  line-height: 10px;
+}
+.header-content-name h2 {
+  font-weight: bold;
+  font-family: "Perpetua Titling", sans-serif;
+}
+.header-content-btn {
+  margin: 15px 175px 20px 0;
+  padding: 5px 15px;
+  font-family: "Lucida Sans Unicode", sans-serif;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  background-color: #61626f;
+}
+.header-content-btn:hover {
+  background-color: #494a54;
+}
+.header-content-btn:focus {
+  outline: 0;
+}
+.header-content-list {
+  position: fixed;
+  top: -100%;
+}
+
+@media (max-width: 1200px) {
+  .header-content-btn {
+    margin-right: 140px;
+  }
+}
+@media (max-width: 992px) {
+  .header-content-btn {
+    font-size: 25px;
+    margin: 15px 85px 20px 0;
+  }
+}
+@media (max-width: 768px) {
+  .header-line {
+    height: 7px;
+  }
+  .header-content {
+    display: block;
+    margin-top: 5px;
+  }
+  .header-content-name {
+    display: flex;
+    justify-content: center;
+    opacity: 60%;
+  }
+  .header-content h1 {
+    font-size: 19px;
+    margin-right: 45px;
+    margin-top: 9px;
+  }
+  .header-content h2 {
+    font-size: 26px;
+  }
+  .header-content-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    margin: 0;
+    font-size: 14px;
+  }
+  .header-content-list {
+    position: static;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    list-style-type: none;
+  }
+  .header-content-list-item a {
+    color: rgba(255, 255, 255, 0.9);
+    font-family: "Perpetua Titling", sans-serif;
+    font-size: 20px;
+  }
+  .header-content-list-item a:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+@media (max-width: 576px) {
+  .header {
+    height: 70px;
+  }
+  .header-line {
+    height: 5px;
+  }
+  .header-content {
+    margin-top: 5px;
+  }
+  .header-content-name {
+    padding: 0;
+    margin-right: 23px;
+  }
+  .header-content h1 {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  .header-content h2 {
+    font-size: 17px;
+    margin-top: 4px;
+  }
+  .header-content-btn {
+    font-size: 12px;
+    padding: 7px 3px;
+    right: 6px;
+    top: 10px;
+  }
+  .header-content-list {
+    margin-top: -5px;
+  }
+  .header-content-list-item a {
+    font-size: 11px;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */

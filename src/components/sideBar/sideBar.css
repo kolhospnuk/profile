@@ -1,0 +1,56 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 35%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 90%;
+  background-color: #014449;
+  transition: 0.6s all;
+  z-index: 1;
+}
+.sidebar-cross {
+  position: absolute;
+  top: 25px;
+  right: 55px;
+}
+.sidebar-cross span {
+  position: fixed;
+  display: block;
+  height: 5px;
+  width: 35px;
+  background-color: white;
+  margin-bottom: -4px;
+}
+.sidebar-cross span:first-child {
+  transform: rotate(-45deg);
+}
+.sidebar-cross span:nth-child(2) {
+  transform: rotate(45deg);
+}
+.sidebar-list {
+  text-align: center;
+  padding: 0;
+  list-style-type: none;
+}
+.sidebar-list-item {
+  margin-top: 10px;
+}
+.sidebar-list-item a {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Perpetua Titling", sans-serif;
+  font-size: 32px;
+}
+.sidebar-list-item a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.active {
+  left: 0;
+}
+
+/*# sourceMappingURL=sideBar.css.map */

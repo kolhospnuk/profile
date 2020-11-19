@@ -1,0 +1,41 @@
+
+body.light-mode {
+  transition: background-color 0.4s ease;
+}
+body.dark-mode {
+  background-color: #323030;
+  transition: background-color 0.4s ease;
+  color: white;
+  .header {
+    border-bottom: #cdd1d1 solid 3px;
+    &-btn {
+
+    }
+  }
+  .start a {
+    color: #00838e;
+    opacity: 60%;
+    &:hover {
+      opacity: 100%;
+    }
+  }
+  .img-block {
+    background-color: #003b40;
+    &-btn {
+      background-color: #00838e;
+      opacity: 80%;
+    }
+  }
+  .facts {
+    background-color: #003b40;
+    border-top: #cdd1d1 solid 3px;
+    &-form-btn {
+      background-color: #00838e;
+      opacity: 80%;
+    }
+  }
+}
+
+body {
+  overflow-x:hidden;
+}

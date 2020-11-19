@@ -1,0 +1,40 @@
+body.light-mode {
+  transition: background-color 0.4s ease;
+}
+
+body.dark-mode {
+  background-color: #323030;
+  transition: background-color 0.4s ease;
+  color: white;
+}
+body.dark-mode .header {
+  border-bottom: #cdd1d1 solid 3px;
+}
+body.dark-mode .start a {
+  color: #00838e;
+  opacity: 60%;
+}
+body.dark-mode .start a:hover {
+  opacity: 100%;
+}
+body.dark-mode .img-block {
+  background-color: #003b40;
+}
+body.dark-mode .img-block-btn {
+  background-color: #00838e;
+  opacity: 80%;
+}
+body.dark-mode .facts {
+  background-color: #003b40;
+  border-top: #cdd1d1 solid 3px;
+}
+body.dark-mode .facts-form-btn {
+  background-color: #00838e;
+  opacity: 80%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,71 @@
+.img-block {
+  padding: 30px 10px;
+  background-color: #4fb3be;
+}
+.img-block-logo {
+  max-width: 210px;
+  max-height: 150px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+.img-block h4 {
+  margin-top: 15px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+.img-block-text {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Lucida Sans Unicode", sans-serif;
+  font-size: 15px;
+}
+.img-block-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 5px 15px;
+  font-family: "Lucida Sans Unicode", sans-serif;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  background-color: #003b40;
+}
+.img-block-btn:hover {
+  opacity: 70%;
+}
+
+@media (max-width: 992px) {
+  .img-block-btn {
+    font-size: 25px;
+  }
+  .img-block-text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .img-block {
+    margin: 0 auto;
+  }
+  .img-block-btn {
+    font-size: 22px;
+  }
+}
+@media (max-width: 576px) {
+  .img-block {
+    margin-top: 5px;
+    padding: 10px;
+  }
+  .img-block h4 {
+    font-size: 20px;
+  }
+  .img-block-text {
+    font-size: 10px;
+  }
+  .img-block-btn {
+    font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=imgBlock.css.map */

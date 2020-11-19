@@ -1,0 +1,81 @@
+.facts {
+  min-height: 150px;
+  padding: 20px 30px;
+  background-color: #4fb3be;
+  border-top: #003b40 solid 3px;
+}
+.facts-header {
+  text-align: center;
+  font-family: "Lucida Sans Unicode", sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+  opacity: 70%;
+}
+.facts-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.facts-form-input {
+  border-radius: 3px;
+  border: none;
+  background-color: #dcd7d7;
+}
+.facts-form-input:focus {
+  border: #003b40 solid 1px;
+}
+.facts-form-btn {
+  padding: 5px 15px;
+  font-family: "Lucida Sans Unicode", sans-serif;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 3px;
+  border: none;
+  background-color: #003b40;
+}
+.facts-form-btn:hover {
+  opacity: 70%;
+}
+.facts-item {
+  margin-top: 20px;
+  text-align: center;
+  vertical-align: center;
+  font-family: "Lucida Sans Unicode", sans-serif;
+  font-style: italic;
+  font-size: 26px;
+}
+
+@media (max-width: 991px) {
+  .facts-header {
+    font-size: 17px;
+  }
+  .facts-item {
+    font-size: 22px;
+  }
+}
+@media (max-width: 767px) {
+  .facts-header {
+    font-size: 15px;
+  }
+  .facts-item {
+    font-size: 22px;
+  }
+}
+@media (max-width: 576px) {
+  .facts-header {
+    font-size: 13px;
+  }
+  .facts-form-btn {
+    padding: 5px 5px;
+    font-size: 18px;
+  }
+  .facts-item {
+    font-size: 18px;
+  }
+}
+.empty {
+  border: #c10f0f solid 3px;
+}
+
+/*# sourceMappingURL=numberFacts.css.map */
