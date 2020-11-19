@@ -16,14 +16,19 @@ body.dark-mode {
     color: #00838e;
     opacity: 60%;
     &:hover {
-      opacity: 100%;
+      color: #4fb3be;
+      //opacity: 100%;
     }
   }
   .img-block {
     background-color: #003b40;
     &-btn {
       background-color: #00838e;
-      opacity: 80%;
+      //background-color: #00838e;
+      //opacity: 80%;
+      &:hover {
+        background-color: #4fb3be;
+      }
     }
   }
   .facts {
@@ -31,7 +36,11 @@ body.dark-mode {
     border-top: #cdd1d1 solid 3px;
     &-form-btn {
       background-color: #00838e;
-      opacity: 80%;
+      //background-color: #00838e;
+      //opacity: 80%;
+      &:hover {
+        background-color: #4fb3be;
+      }
     }
   }
 }

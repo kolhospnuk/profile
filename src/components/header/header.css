@@ -23,10 +23,12 @@
 }
 .header-content-name h2 {
   font-weight: bold;
+  font-family: "Perpetua Titling", sans-serif;
 }
 .header-content-btn {
   margin: 15px 175px 20px 0;
   padding: 5px 15px;
+  font-family: "Lucida Sans Unicode", sans-serif;
   color: white;
   font-size: 30px;
   font-weight: bold;
@@ -93,6 +95,7 @@
   }
   .header-content-list-item a {
     color: rgba(255, 255, 255, 0.9);
+    font-family: "Perpetua Titling", sans-serif;
     font-size: 20px;
   }
   .header-content-list-item a:hover {
@@ -102,7 +105,7 @@
 }
 @media (max-width: 576px) {
   .header {
-    height: 70px;
+    height: 80px;
   }
   .header-line {
     height: 5px;
@@ -127,9 +130,6 @@
     padding: 7px 3px;
     right: 6px;
     top: 10px;
-  }
-  .header-content-list {
-    margin-top: -5px;
   }
   .header-content-list-item a {
     font-size: 11px;

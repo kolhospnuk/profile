@@ -15,14 +15,16 @@ body.dark-mode .start a {
   opacity: 60%;
 }
 body.dark-mode .start a:hover {
-  opacity: 100%;
+  color: #4fb3be;
 }
 body.dark-mode .img-block {
   background-color: #003b40;
 }
 body.dark-mode .img-block-btn {
   background-color: #00838e;
-  opacity: 80%;
+}
+body.dark-mode .img-block-btn:hover {
+  background-color: #4fb3be;
 }
 body.dark-mode .facts {
   background-color: #003b40;
@@ -30,7 +32,9 @@ body.dark-mode .facts {
 }
 body.dark-mode .facts-form-btn {
   background-color: #00838e;
-  opacity: 80%;
+}
+body.dark-mode .facts-form-btn:hover {
+  background-color: #4fb3be;
 }
 
 body {

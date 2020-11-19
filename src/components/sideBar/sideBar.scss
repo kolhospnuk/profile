@@ -50,6 +50,44 @@
   }
 }
 
+@media (max-width: 768px) {
+  .sidebar {
+    width: 50%;
+    &-cross {
+      span {
+        height: 4px;
+        width: 30px;
+      }
+    }
+    &-list {
+      &-item {
+        a {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    width: 60%;
+    &-cross {
+      span {
+        height: 3px;
+        width: 25px;
+      }
+    }
+    &-list {
+      &-item {
+        a {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
 
 .active {
   left: 0;
