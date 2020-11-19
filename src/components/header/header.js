@@ -32,7 +32,7 @@ const Header = () => {
                     </button>
                     <ul className="header-content-list">
                         <li className="header-content-list-item">
-                            <Link to="/aboutme">About mert</Link>
+                            <Link to="/aboutme">About me</Link>
                         </li>
                         <li className="header-content-list-item">
                             <Link to="/education">Education</Link>

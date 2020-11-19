@@ -12,7 +12,6 @@ body.dark-mode .header {
 }
 body.dark-mode .start a {
   color: #00838e;
-  opacity: 60%;
 }
 body.dark-mode .start a:hover {
   color: #4fb3be;

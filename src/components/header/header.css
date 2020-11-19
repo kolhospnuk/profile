@@ -69,7 +69,6 @@
   .header-content-name {
     display: flex;
     justify-content: center;
-    opacity: 60%;
   }
   .header-content h1 {
     font-size: 19px;
