@@ -23,12 +23,10 @@
 }
 .header-content-name h2 {
   font-weight: bold;
-  font-family: "Perpetua Titling", sans-serif;
 }
 .header-content-btn {
   margin: 15px 175px 20px 0;
   padding: 5px 15px;
-  font-family: "Lucida Sans Unicode", sans-serif;
   color: white;
   font-size: 30px;
   font-weight: bold;
@@ -95,7 +93,6 @@
   }
   .header-content-list-item a {
     color: rgba(255, 255, 255, 0.9);
-    font-family: "Perpetua Titling", sans-serif;
     font-size: 20px;
   }
   .header-content-list-item a:hover {

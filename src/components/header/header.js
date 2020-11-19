@@ -10,7 +10,6 @@ const Header = () => {
     const darkMode = useDarkMode(false); // добавляет в боди клас
 
     const toggleChange = () => {
-        console.log(darkMode);
         darkMode.toggle();
         name === 'Dark' ? setName('Light') : setName('Dark');
     }

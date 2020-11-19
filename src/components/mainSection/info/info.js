@@ -15,7 +15,7 @@ export default class Info extends Component {
     render() {
         return (
             <div className="info">
-                <Route path="/" exact component={Start}/>
+                <Route path="/profile" exact component={Start}/>
                 <Route path="/aboutMe" component={AboutMe}/>
                 <Route path="/education" component={Education}/>
                 <Route path="/skills" component={Skills}/>
