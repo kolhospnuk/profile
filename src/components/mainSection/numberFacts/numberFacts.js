@@ -18,7 +18,7 @@ export default class NumberFacts extends Component {
 
     onSubmit = (e) => {
 
-        const url = "http://numbersapi.com/";
+        const url = "https://numbersapi.com/";
         const urlNumber = `${url}${this.state.id}`;
 
         const regExp = /^\d+$/;
@@ -50,7 +50,6 @@ export default class NumberFacts extends Component {
                 return res.text(); //res.json();
             })
             .then((body) => {
-                console.log(body);
                 this.setState({
                     fact: body
                 })
