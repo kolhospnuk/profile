@@ -1,13 +1,14 @@
 
 import React from "react";
+import {Col, Row} from "react-bootstrap";
 import "./mainSection.css";
 
 import Info from "./info/info";
 import ImgBlock from "./imgBlock/imgBlock";
-import {Col, Row} from "react-bootstrap";
 
-const MainSection = () => {
 
+/* Use bootstrap for build main section*/
+export default () => {
     return (
         <div className="main">
             <Row>
@@ -21,6 +22,3 @@ const MainSection = () => {
         </div>
     )
 }
-
-export default MainSection;
-// openMenu={this.props.openMenu}

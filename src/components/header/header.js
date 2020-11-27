@@ -21,7 +21,7 @@ const Header = () => {
             <div className="container">
                 <div className="header-content">
                     <div className="header-content-name">
-                        <h1>Anton Momoth</h1>
+                        <h1>Anton Momot</h1>
                         <h2>React Developer</h2>
                     </div>
                     <button type='button'

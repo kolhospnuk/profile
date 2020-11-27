@@ -5,7 +5,7 @@ import facebook from "../../img/icons/facebook-circular-logo.svg";
 import instagram from "../../img/icons/instagram.svg";
 import phone from "../../img/icons/telegram-logo.svg";
 
-const Footer = () => {
+export default () => {
 
     return (
         <div className="footer">
@@ -38,5 +38,3 @@ const Footer = () => {
         </div>
     )
 }
-
-export default Footer;

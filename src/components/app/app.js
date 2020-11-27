@@ -1,30 +1,31 @@
 
 import React, {Component} from 'react';
-import "./app.css";
 import {BrowserRouter as Router} from "react-router-dom";
 import {Container} from "react-bootstrap";
 
-import Footer from "../footer/footer";
-import SideBar from "../sideBar/sideBar";
+import "./app.css";
+
+import Footer from "../footer/Footer";
 import Header from "../header/header";
-import MainSection from "../mainSection/mainSection";
+import MainSection from "../mainSection/MainSection";
 import NumberFacts from "../mainSection/numberFacts/numberFacts";
 import Context from "../context/context";
+import SideBar from "../sideBar/sideBar";
 
+/* Create the main component of our app */
 export default class App extends Component {
 
+    /**
+     * "MenuState" may have two values, if the menu is hidden value is false,
+     * visible value is true. Default it's false
+     *
+     * @type {{menuState: boolean}}
+     */
     state = {
         menuState: false,
     }
 
-    // error: false
-
-    // componentDidCatch(error, errorInfo) {
-    //     this.setState({
-    //         error: true
-    //     })
-    // }
-
+    /* Function changes value of "menuState" */
     openMenu = () => {
         this.setState((state) => {
            return {
@@ -33,12 +34,16 @@ export default class App extends Component {
         })
     };
 
+
+    /**
+     * Render components.
+     * Use Context wrapper to pass the value inside components.
+     * Use Router wrapper for routing.
+     * Pass the state to the Sidebar component
+     *
+     * @returns {*}
+     */
     render() {
-
-        // if (this.state.error) {
-        //     return <Error/>;
-        // }
-
         return (
             <Context.Provider value={this.openMenu}>
                 <Router>
@@ -54,5 +59,3 @@ export default class App extends Component {
         )
     }
 }
-
-// for small mobile css

@@ -4,11 +4,11 @@ import {Route} from 'react-router-dom';
 import "./info.css";
 
 import AboutMe from "./pages/aboutMe/AboutMe";
-import Education from "./pages/education/education";
-import Contact from "./pages/contact/contact";
-import Start from "./pages/start/start";
-import Skills from "./pages/skills/skills";
-import RandomThings from "./pages/randomThings/randomThings";
+import Education from "./pages/education/Education";
+import Contact from "./pages/contact/Contact";
+import Start from "./pages/start/startPage";
+import Skills from "./pages/skills/Skills";
+import RandomThings from "./pages/randomThings/RandomThings";
 
 export default class Info extends Component {
 

@@ -3,8 +3,9 @@ import React, {useContext} from "react";
 import "./start.css";
 import Context from "../../../../context/context";
 
-const Start = () => {
+const StartPage = () => {
 
+    /* Use hooks useContext for get value */
     const openMenu = useContext(Context);
 
     return (
@@ -18,4 +19,4 @@ const Start = () => {
     )
 }
 
-export default Start;
+export default StartPage;

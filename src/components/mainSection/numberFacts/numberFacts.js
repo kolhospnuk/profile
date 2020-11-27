@@ -1,57 +1,43 @@
 
 import React, {Component} from "react";
 import "./numberFacts.css";
-import Error from "../../error/error";
 
 export default class NumberFacts extends Component {
 
     state = {
-        id: "",
-        fact: ""
+        name: "",
+        obj: {},
+        variants: ''
     }
 
-    numChange = (e) => {
+    cocktailChange = (e) => {
         this.setState({
-            id: e.target.value
+            name: e.target.value
         })
     };
 
     onSubmit = (e) => {
-
-        const url = "https://numbersapi.com/";
-        const urlNumber = `${url}${this.state.id}`;
-
-        const regExp = /^\d+$/;
-        const result = this.state.id.match(regExp);
-
         e.preventDefault();
 
-        if (urlNumber !== url && result !== null) {
-            this.showFact(urlNumber);
-        } else {
-            this.errorMessage();
-        }
-        this.setState({id: ""});
+        const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${this.state.name}`;
+
+        this.getIngredients(url);
+
+        // if (this.state.obj.length > 0) {
+        //     this.setState({
+        //         variants: this.state.obj.strDrink
+        //     })
+        // }
     }
 
-    errorMessage = () => {
-        this.setState({
-            fact: `Enter correct number`
-        });
-    }
-
-    showFact = (urlNumber) => {
-        fetch(urlNumber)
+    async getIngredients(url) {
+        await fetch(url)
             .then((res) => {
-                // console.log(res);
-                // if (!res.ok) {
-                //     this.errorMessage();
-                // }
-                return res.text(); //res.json();
+                return res.json();
             })
             .then((body) => {
                 this.setState({
-                    fact: body
+                    variants: body.drinks[0].strDrink
                 })
             })
     }
@@ -65,65 +51,72 @@ export default class NumberFacts extends Component {
         return (
             <div className="facts">
                 <div className="facts-header">
-                    Enter any number and get interesting fact about number
+                    Enter any name of cocktail and I say you all ingredients
                 </div>
                 <form className="facts-form"
                       onSubmit={this.onSubmit}>
                     <input className={inputClass}
                            type="text"
-                           onChange={this.numChange}
-                           placeholder="Enter number..."
-                           value={this.state.id}/>
+                           onChange={this.cocktailChange}
+                           placeholder="Enter cocktail..."
+                           value={this.state.name}/>
                     <button className="facts-form-btn">
                         Enter
                     </button>
                 </form>
                 <div className="facts-item">
-                    {fact}
+                    {this.state.variants}
                 </div>
             </div>
         )
     }
 }
 
+
+
+
 // export default class NumberFacts extends Component {
 //
 //     state = {
 //         id: "",
-//         url: "",
-//         fact: "",
-//         placeholder: ""
+//         fact: ""
 //     }
 //
 //     numChange = (e) => {
 //         this.setState({
-//             url: `http://numbersapi.com/${e.target.value}`
+//             id: e.target.value
 //         })
 //     };
 //
 //     onSubmit = (e) => {
+//
+//         const url = "http://numbersapi.com/";
+//         const urlNumber = `${url}${this.state.id}`
+//         console.log(url)
+//         console.log(urlNumber)
+//
+//         const regExp = /^\d+$/;
+//         const result = this.state.id.match(regExp)
+//
 //         e.preventDefault();
-//         if (this.state.url !== "") {
-//             this.showFact(this.state.url);// better in componentDidMount ?
+//
+//         if (urlNumber !== url && result !== null) {
+//             this.showFact(urlNumber);
 //         } else {
-//             this.setState({placeholder: "empty"})
+//             this.errorMessage();
 //         }
-//         this.setState({fact: ""})
+//         this.setState({id: ""});
 //     }
 //
 //     errorMessage = () => {
 //         this.setState({
 //             fact: `Enter correct number`
-//         })
-//         throw new Error(`Could not fetch`);
+//         });
 //     }
 //
-//     showFact = () => {
-//         fetch(this.state.url)
+//     showFact = (urlNumber) => {
+//         fetch(urlNumber)
 //             .then((res) => {
-//                 if (!res.ok) {
-//                     this.errorMessage();
-//                 }
 //                 return res.text(); //res.json();
 //             })
 //             .then((body) => {
@@ -140,24 +133,23 @@ export default class NumberFacts extends Component {
 //         const inputClass = `facts-form-input ${placeholder}`;
 //
 //         return (
-//             <div className="container">
-//                 <div className="facts">
-//                     <div className="facts-header">
-//                         Enter any number and get interesting fact about number
-//                     </div>
-//                     <form className="facts-form"
-//                           onSubmit={this.onSubmit}>
-//                         <input className={inputClass}
-//                                type="text"
-//                                onChange={this.numChange}
-//                                placeholder="Enter number..."/>
-//                         <button className="facts-form-btn">
-//                             Enter
-//                         </button>
-//                     </form>
-//                     <div className="facts-item">
-//                         {fact}
-//                     </div>
+//             <div className="facts">
+//                 <div className="facts-header">
+//                     Enter any number and get interesting fact about number
+//                 </div>
+//                 <form className="facts-form"
+//                       onSubmit={this.onSubmit}>
+//                     <input className={inputClass}
+//                            type="text"
+//                            onChange={this.numChange}
+//                            placeholder="Enter number..."
+//                            value={this.state.id}/>
+//                     <button className="facts-form-btn">
+//                         Enter
+//                     </button>
+//                 </form>
+//                 <div className="facts-item">
+//                     {fact}
 //                 </div>
 //             </div>
 //         )
