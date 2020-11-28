@@ -1,78 +1,123 @@
-
 import React, {Component} from "react";
-import "./numberFacts.css";
+import "./cocktailRecipes.css";
+import CocktailService from "../../../services/services";
 
-export default class NumberFacts extends Component {
+export default class CocktailRecipes extends Component {
 
     state = {
-        name: "",
-        obj: {},
-        variants: ''
+        name: '',
+        list: null,
+        ingredients: '',
+        placeholder: false
     }
 
     cocktailChange = (e) => {
         this.setState({
-            name: e.target.value
+            name: e.target.value,
+            placeholder: false
         })
     };
 
     onSubmit = (e) => {
+        const {name} = this.state;
+
         e.preventDefault();
 
-        const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${this.state.name}`;
-
-        this.getIngredients(url);
-
-        // if (this.state.obj.length > 0) {
-        //     this.setState({
-        //         variants: this.state.obj.strDrink
-        //     })
-        // }
+        if (name.length <= 3) {
+            this.showError();
+        } else {
+            const service = new CocktailService();
+            service.getCocktail(name).then((cocktail) => {
+                this.setState({
+                    list: cocktail.drinks
+                })
+            }).then(() => {
+                this.showResult();
+            })
+        }
     }
 
-    async getIngredients(url) {
-        await fetch(url)
-            .then((res) => {
-                return res.json();
-            })
-            .then((body) => {
-                this.setState({
-                    variants: body.drinks[0].strDrink
-                })
-            })
+    showResult() {
+        const {list} = this.state;
+
+        if (list === null) {
+           this.showError();
+        } else {
+            if (list.length > 1) {
+                this.showCocktails(list);
+            } else {
+                this.showIngredients(list);
+            }
+        }
+    }
+
+    showError() {
+        this.setState({
+            ingredients: 'Enter correct cocktail name',
+            placeholder: true
+        })
+    }
+
+    showCocktails(list) {
+        const cocktails = list.map((item) => {
+            return item.strDrink;
+        })
+
+        this.setState({
+            ingredients: `Enter one of the suggested cocktails: ${cocktails.toString()}`
+        })
+    }
+
+    showIngredients(list) {
+        const ingredientsMax = 10;
+        let ingredientsList = '';
+
+        for (let i = 0; i <= ingredientsMax; i++) {
+            for (let key in list[0]) {
+                if (key === `strIngredient${i}` && list[0][key] != null) {
+                    ingredientsList += `${list[0][key]}, ` ;
+                }
+            }
+        }
+
+        this.setState({
+            ingredients: `For making a cocktail you will need: ${ingredientsList}`
+        });
     }
 
     render() {
 
-        const {placeholder, fact} = this.state;
+        const {name, placeholder, ingredients} = this.state;
 
-        const inputClass = `facts-form-input ${placeholder}`;
+        let inputClass = `cocktail-form-input`;
+
+        if (placeholder) {
+            inputClass = `${inputClass}-active`
+        }
 
         return (
-            <div className="facts">
-                <div className="facts-header">
-                    Enter any name of cocktail and I say you all ingredients
+            <div className="cocktail">
+                <div className="cocktail-header">
+                    Enter the names of the cocktail
                 </div>
-                <form className="facts-form"
+                <form className="cocktail-form"
                       onSubmit={this.onSubmit}>
                     <input className={inputClass}
                            type="text"
                            onChange={this.cocktailChange}
                            placeholder="Enter cocktail..."
-                           value={this.state.name}/>
-                    <button className="facts-form-btn">
+                           value={name}/>
+                    <button className="cocktail-form-btn">
                         Enter
                     </button>
                 </form>
-                <div className="facts-item">
-                    {this.state.variants}
+                <div className="cocktail-item">
+                    {ingredients}
                 </div>
             </div>
         )
     }
 }
-
-
 
 
 // export default class NumberFacts extends Component {

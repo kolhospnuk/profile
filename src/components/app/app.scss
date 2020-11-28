@@ -14,30 +14,27 @@ body.dark-mode {
   }
   .start a {
     color: #00838e;
-    //opacity: 60%;
     &:hover {
       color: #4fb3be;
-      //opacity: 100%;
     }
   }
   .img-block {
     background-color: #003b40;
     &-btn {
       background-color: #00838e;
-      //background-color: #00838e;
-      //opacity: 80%;
       &:hover {
         background-color: #4fb3be;
       }
     }
   }
-  .facts {
+  .cocktail {
     background-color: #003b40;
     border-top: #cdd1d1 solid 3px;
+    &-header {
+      color: #cdd1d1;
+    }
     &-form-btn {
       background-color: #00838e;
-      //background-color: #00838e;
-      //opacity: 80%;
       &:hover {
         background-color: #4fb3be;
       }

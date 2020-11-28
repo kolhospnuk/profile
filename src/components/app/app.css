@@ -25,14 +25,17 @@ body.dark-mode .img-block-btn {
 body.dark-mode .img-block-btn:hover {
   background-color: #4fb3be;
 }
-body.dark-mode .facts {
+body.dark-mode .cocktail {
   background-color: #003b40;
   border-top: #cdd1d1 solid 3px;
 }
-body.dark-mode .facts-form-btn {
+body.dark-mode .cocktail-header {
+  color: #cdd1d1;
+}
+body.dark-mode .cocktail-form-btn {
   background-color: #00838e;
 }
-body.dark-mode .facts-form-btn:hover {
+body.dark-mode .cocktail-form-btn:hover {
   background-color: #4fb3be;
 }
 

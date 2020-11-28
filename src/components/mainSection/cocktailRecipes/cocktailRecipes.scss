@@ -1,5 +1,5 @@
 
-.facts {
+.cocktail {
   min-height: 150px;
   padding: 20px 30px;
   background-color: #4fb3be;
@@ -19,6 +19,9 @@
       border-radius: 3px;
       border: none;
       background-color: #dcd7d7;
+      &-active {
+        border: #c10f0f solid 3px;
+      }
       &:focus {
         border: #003b40 solid 1px;
       }
@@ -49,7 +52,7 @@
 }
 
 @media (max-width: 991px) {
-  .facts {
+  .cocktail {
     &-header {
       font-size: 17px;
     }
@@ -60,7 +63,7 @@
 }
 
 @media (max-width: 767px) {
-  .facts {
+  .cocktail {
     &-header {
     font-size: 15px;
     }
@@ -71,7 +74,7 @@
 }
 
 @media (max-width: 576px) {
-  .facts {
+  .cocktail {
     &-header {
       font-size: 13px;
     }
@@ -85,8 +88,4 @@
       font-size: 18px;
     }
   }
-}
-
-.empty {
-  border: #c10f0f solid 3px;
 }

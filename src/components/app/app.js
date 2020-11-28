@@ -8,7 +8,7 @@ import "./app.css";
 import Footer from "../footer/Footer";
 import Header from "../header/header";
 import MainSection from "../mainSection/MainSection";
-import NumberFacts from "../mainSection/numberFacts/numberFacts";
+import CocktailRecipes from "../mainSection/cocktailRecipes/cocktailRecipes";
 import Context from "../context/context";
 import SideBar from "../sideBar/sideBar";
 
@@ -51,7 +51,7 @@ export default class App extends Component {
                     <SideBar menuState={this.state.menuState}/>
                     <Container>
                         <MainSection/>
-                        <NumberFacts/>
+                        <CocktailRecipes/>
                     </Container>
                     <Footer/>
                 </Router>
