@@ -3,13 +3,18 @@ import useDarkMode from 'use-dark-mode';
 import './header.css';
 import {Link} from "react-router-dom";
 
-
+/* App main header */
 const Header = () => {
 
+    /* Hook useState change button name, 'Dark' or 'Light' */
     const [name, setName] = useState('Dark');
-    const darkMode = useDarkMode(false); // добавляет в боди клас
 
+    /* Hook useDarkMode toggling a CSS class, add to element body
+     * class 'light-mode' or 'dark-mode'. Default state - false, it's - 'light-mode'
+     */
+    const darkMode = useDarkMode(false);
 
+    /* Function toggle themes and name button */
     const toggleChange = () => {
         darkMode.toggle();
         name === 'Dark' ? setName('Light') : setName('Dark');

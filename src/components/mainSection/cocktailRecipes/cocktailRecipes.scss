@@ -76,9 +76,10 @@
 @media (max-width: 576px) {
   .cocktail {
     &-header {
-      font-size: 13px;
+      font-size: 16px;
     }
     &-form {
+      margin: 15px;
       &-btn {
         padding: 5px 5px;
         font-size: 18px;

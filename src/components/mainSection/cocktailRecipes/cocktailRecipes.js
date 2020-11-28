@@ -4,10 +4,15 @@ import CocktailService from "../../../services/services";
 
 export default class CocktailRecipes extends Component {
 
+    /**
+     * Cocktails states
+     *
+     * @type {{name: string, ingredients: string, placeholder: boolean, list: null}}
+     */
     state = {
         name: '',
         list: null,
-        ingredients: '',
+        result: '',
         placeholder: false
     }
 
@@ -18,6 +23,11 @@ export default class CocktailRecipes extends Component {
         })
     };
 
+    /**
+     * Get list with data about cocktails from service
+     *
+     * @param e
+     */
     onSubmit = (e) => {
         const {name} = this.state;
 
@@ -53,21 +63,31 @@ export default class CocktailRecipes extends Component {
 
     showError() {
         this.setState({
-            ingredients: 'Enter correct cocktail name',
+            result: 'Enter correct cocktail name',
             placeholder: true
         })
     }
 
+    /**
+     * Search all cocktails with a similar name
+     *
+     * @param list - cocktails data
+     */
     showCocktails(list) {
         const cocktails = list.map((item) => {
             return item.strDrink;
         })
 
         this.setState({
-            ingredients: `Enter one of the suggested cocktails: ${cocktails.toString()}`
+            result: `Enter one of the suggested cocktails: ${cocktails.toString()}`
         })
     }
 
+    /**
+     * Search all ingredients in cocktail
+     *
+     * @param list - cocktail data
+     */
     showIngredients(list) {
         const ingredientsMax = 10;
         let ingredientsList = '';
@@ -81,7 +101,7 @@ export default class CocktailRecipes extends Component {
         }
 
         this.setState({
-            ingredients: `For making a cocktail you will need: ${ingredientsList}`
+            result: `For making a cocktail you will need: ${ingredientsList}`
         });
     }
 
@@ -98,7 +118,7 @@ export default class CocktailRecipes extends Component {
         return (
             <div className="cocktail">
                 <div className="cocktail-header">
-                    Enter the names of the cocktail
+                    Enter the name of the cocktail
                 </div>
                 <form className="cocktail-form"
                       onSubmit={this.onSubmit}>
@@ -118,85 +138,3 @@ export default class CocktailRecipes extends Component {
         )
     }
 }
-
-
-// export default class NumberFacts extends Component {
-//
-//     state = {
-//         id: "",
-//         fact: ""
-//     }
-//
-//     numChange = (e) => {
-//         this.setState({
-//             id: e.target.value
-//         })
-//     };
-//
-//     onSubmit = (e) => {
-//
-//         const url = "http://numbersapi.com/";
-//         const urlNumber = `${url}${this.state.id}`
-//         console.log(url)
-//         console.log(urlNumber)
-//
-//         const regExp = /^\d+$/;
-//         const result = this.state.id.match(regExp)
-//
-//         e.preventDefault();
-//
-//         if (urlNumber !== url && result !== null) {
-//             this.showFact(urlNumber);
-//         } else {
-//             this.errorMessage();
-//         }
-//         this.setState({id: ""});
-//     }
-//
-//     errorMessage = () => {
-//         this.setState({
-//             fact: `Enter correct number`
-//         });
-//     }
-//
-//     showFact = (urlNumber) => {
-//         fetch(urlNumber)
-//             .then((res) => {
-//                 return res.text(); //res.json();
-//             })
-//             .then((body) => {
-//                 this.setState({
-//                     fact: body
-//                 })
-//             })
-//     }
-//
-//     render() {
-//
-//         const {placeholder, fact} = this.state;
-//
-//         const inputClass = `facts-form-input ${placeholder}`;
-//
-//         return (
-//             <div className="facts">
-//                 <div className="facts-header">
-//                     Enter any number and get interesting fact about number
-//                 </div>
-//                 <form className="facts-form"
-//                       onSubmit={this.onSubmit}>
-//                     <input className={inputClass}
-//                            type="text"
-//                            onChange={this.numChange}
-//                            placeholder="Enter number..."
-//                            value={this.state.id}/>
-//                     <button className="facts-form-btn">
-//                         Enter
-//                     </button>
-//                 </form>
-//                 <div className="facts-item">
-//                     {fact}
-//                 </div>
-//             </div>
-//         )
-//     }
-// }

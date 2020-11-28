@@ -67,7 +67,10 @@
 }
 @media (max-width: 576px) {
   .cocktail-header {
-    font-size: 13px;
+    font-size: 16px;
+  }
+  .cocktail-form {
+    margin: 15px;
   }
   .cocktail-form-btn {
     padding: 5px 5px;

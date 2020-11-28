@@ -40,8 +40,6 @@ export default class App extends Component {
      * Use Context wrapper to pass the value inside components.
      * Use Router wrapper for routing.
      * Pass the state to the Sidebar component
-     *
-     * @returns {*}
      */
     render() {
         return (

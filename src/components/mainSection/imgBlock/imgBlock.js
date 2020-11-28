@@ -2,7 +2,7 @@
 import React, {useContext} from "react";
 
 import "./imgBlock.css";
-import logo from '../../../img/OnixFoto.jpg';
+import logo from '../../../img/Foto.jpg';
 
 import Context from "../../context/context";
 

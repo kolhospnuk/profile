@@ -1,14 +1,55 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #E6E6FA;
+  overflow-x: hidden;
+}
+
+body.light-mode {
+  transition: background-color 0.4s ease;
+}
+
+body.dark-mode {
+  background-color: #323030;
+  transition: background-color 0.4s ease;
+  color: white;
+}
+body.dark-mode .header {
+  border-bottom: #cdd1d1 solid 3px;
+}
+body.dark-mode .start a {
+  color: #00838e;
+}
+body.dark-mode .start a:hover {
+  color: #4fb3be;
+}
+body.dark-mode .img-block {
+  background-color: #003b40;
+}
+body.dark-mode .img-block-btn {
+  background-color: #00838e;
+}
+body.dark-mode .img-block-btn:hover {
+  background-color: #4fb3be;
+}
+body.dark-mode .cocktail {
+  background-color: #003b40;
+  border-top: #cdd1d1 solid 3px;
+}
+body.dark-mode .cocktail-header {
+  color: #cdd1d1;
+}
+body.dark-mode .cocktail-form-btn {
+  background-color: #00838e;
+}
+body.dark-mode .cocktail-form-btn:hover {
+  background-color: #4fb3be;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
+/*# sourceMappingURL=index.css.map */
