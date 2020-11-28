@@ -75,7 +75,7 @@ export default class CocktailRecipes extends Component {
      */
     showCocktails(list) {
         const cocktails = list.map((item) => {
-            return item.strDrink;
+            return ` ${item.strDrink}`;
         })
 
         this.setState({
@@ -101,13 +101,13 @@ export default class CocktailRecipes extends Component {
         }
 
         this.setState({
-            result: `For making a cocktail you will need: ${ingredientsList}`
+            result: `For making a cocktail you will need: ${ingredientsList.slice(0, -2)}`
         });
     }
 
     render() {
 
-        const {name, placeholder, ingredients} = this.state;
+        const {name, placeholder, result} = this.state;
 
         let inputClass = `cocktail-form-input`;
 
@@ -118,7 +118,7 @@ export default class CocktailRecipes extends Component {
         return (
             <div className="cocktail">
                 <div className="cocktail-header">
-                    Enter the name of the cocktail
+                    Enter cocktail name
                 </div>
                 <form className="cocktail-form"
                       onSubmit={this.onSubmit}>
@@ -132,7 +132,7 @@ export default class CocktailRecipes extends Component {
                     </button>
                 </form>
                 <div className="cocktail-item">
-                    {ingredients}
+                    {result}
                 </div>
             </div>
         )
