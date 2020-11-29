@@ -4,6 +4,13 @@
   color: rgba(255, 255, 255, 0.8);
   border-bottom: #003b40 solid 3px;
 }
+.header a {
+  color: white;
+}
+.header a:hover {
+  color: #5b5b5e;
+  text-decoration: none;
+}
 .header-line {
   height: 12px;
   background-color: #003b40;
@@ -15,6 +22,7 @@
 .header-content-name {
   display: inline-block;
   padding: 0 45px;
+  list-style: none;
 }
 .header-content-name h1 {
   font-size: 25px;
@@ -22,6 +30,7 @@
   line-height: 10px;
 }
 .header-content-name h2 {
+  color: white;
   font-weight: bold;
   font-family: "Perpetua Titling", sans-serif;
 }

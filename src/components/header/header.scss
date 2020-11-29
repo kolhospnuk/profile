@@ -4,6 +4,13 @@
   background-color: #00838e;
   color: rgba(256, 256, 256, .8);
   border-bottom: #003b40 solid 3px;
+  a {
+    color: white;
+    &:hover {
+      color: #5b5b5e;
+      text-decoration: none;
+    }
+  }
   &-line {
     height: 12px;
     background-color: #003b40;
@@ -14,12 +21,14 @@
     &-name {
       display: inline-block;
       padding: 0 45px;
+      list-style: none;
       h1 {
         font-size: 25px;
         margin-top: 16px;
         line-height: 10px;
       }
       h2 {
+        color: white;
         font-weight: bold;
         font-family: "Perpetua Titling", sans-serif;
       }
@@ -72,7 +81,6 @@
       &-name {
         display: flex;
         justify-content: center;
-        //opacity: 60%;
       }
       h1 {
         font-size: 19px;
