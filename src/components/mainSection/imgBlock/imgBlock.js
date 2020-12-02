@@ -4,7 +4,7 @@ import React, {useContext} from "react";
 import "./imgBlock.css";
 import logo from '../../../img/Foto.jpg';
 
-import Context from "../../context/context";
+import Context from "../../../context/context";
 
 
 /* Create component. Component has some information about Anton */

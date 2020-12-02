@@ -1,7 +1,7 @@
 
 import React, {useContext} from "react";
 import "./start.css";
-import Context from "../../../../context/context";
+import Context from "../../../../../context/context";
 
 const StartPage = () => {
 

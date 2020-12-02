@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import './sideBar.css';
-import Context from "../context/context";
+import Context from "../../context/context";
 import {Link} from "react-router-dom";
 
 export default class SideBar extends Component {

@@ -9,7 +9,7 @@ import Footer from "../footer/Footer";
 import Header from "../header/header";
 import MainSection from "../mainSection/MainSection";
 import CocktailRecipes from "../mainSection/cocktailRecipes/cocktailRecipes";
-import Context from "../context/context";
+import Context from "../../context/context";
 import SideBar from "../sideBar/sideBar";
 
 /* Create the main component of our app */
@@ -22,7 +22,7 @@ export default class App extends Component {
      * @type {{menuState: boolean}}
      */
     state = {
-        menuState: false,
+        menuState: false
     }
 
     /* Function changes value of "menuState" */
