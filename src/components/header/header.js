@@ -1,10 +1,13 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import useDarkMode from 'use-dark-mode';
 import './header.css';
 import {Link} from "react-router-dom";
+import Context from "../../context/context";
 
 /* App main header */
 const Header = () => {
+
+    const openMenu = useContext(Context);
 
     /* Hook useState change button name, 'Dark' or 'Light' */
     const [name, setName] = useState('Dark');
@@ -21,7 +24,8 @@ const Header = () => {
     }
 
     return (
-        <div className='header'>
+        <div className='header'
+            onClick={openMenu}>
             <div className="header-line"/>
             <div className="container">
                 <div className="header-content">

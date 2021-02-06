@@ -25,6 +25,12 @@ export default class App extends Component {
         menuState: false
     }
 
+    componentDidMount() {
+        document.addEventListener('onClick', (e) => {
+           console.log(e.target);
+        })
+    }
+
     /* Function changes value of "menuState" */
     openMenu = () => {
         this.setState((state) => {
@@ -33,7 +39,6 @@ export default class App extends Component {
            }
         })
     };
-
 
     /**
      * Render components.
